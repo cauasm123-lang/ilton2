@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espectro Eletromagnético e Luz Visível</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .visible-spectrum {
+            background: linear-gradient(to right, 
+                #4b0082, /* Violeta ~380nm */
+                #0000ff, /* Azul ~450nm */
+                #00ff00, /* Verde ~520nm */
+                #ffff00, /* Amarelo ~580nm */
+                #ff7f00, /* Laranja ~620nm */
+                #ff0000  /* Vermelho ~750nm */
+            );
+            height: 80px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .spectrum-container {
+            background: #1a202c;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .wave-container {
+            height: 100px;
+            overflow: hidden;
+            background: #000;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .marker {
+            position: absolute;
+            top: -25px;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: #a0aec0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">O Espectro Eletromagnético</h1>
+            <p class="text-gray-600 mt-2">Da luz visível às radiações ionizantes de alta frequência</p>
+        </header>
+
+        <!-- Seção do Espectro Completo (Alta Energia) -->
+        <div class="spectrum-container shadow-xl mb-8">
+            <h2 class="text-blue-400 font-bold mb-4 flex items-center">
+                <span class="mr-2">⚡</span> Radiações de Alta Energia (Frequência ↑ | Comprimento ↓)
+            </h2>
+            
+            <div class="grid grid-cols-4 gap-1 h-20 mb-4 text-white text-center text-xs font-bold items-center">
+                <div class="bg-gradient-to-r from-purple-900 to-indigo-800 rounded-l p-2 h-full flex items-center justify-center border-r border-gray-700">
+                    RAIOS GAMA<br>< 0.01 nm
+                </div>
+                <div class="bg-indigo-700 p-2 h-full flex items-center justify-center border-r border-gray-700">
+                    RAIOS-X<br>0.01 - 10 nm
+                </div>
+                <div class="bg-indigo-500 p-2 h-full flex items-center justify-center border-r border-gray-700">
+                    ULTRAVIOLETA (UV)<br>10 - 380 nm
+                </div>
+                <div class="visible-spectrum p-2 h-full flex items-center justify-center rounded-r ring-4 ring-white ring-inset">
+                    <span class="bg-black/50 px-2 py-1 rounded">LUZ VISÍVEL</span>
+                </div>
+            </div>
+
+            <!-- Descrições -->
+            <div class="grid md:grid-cols-3 gap-6 mt-8 text-gray-300 text-sm">
+                <div class="border-l-2 border-purple-600 pl-4">
+                    <h3 class="text-purple-400 font-bold mb-1">Raios Gama (γ)</h3>
+                    <p>Produzidos por transições nucleares. Altamente penetrantes e perigosos, mas usados em radioterapia.</p>
+                </div>
+                <div class="border-l-2 border-indigo-500 pl-4">
+                    <h3 class="text-indigo-400 font-bold mb-1">Raios-X</h3>
+                    <p>Energia capaz de atravessar tecidos moles. Essenciais em diagnósticos médicos e segurança.</p>
+                </div>
+                <div class="border-l-2 border-blue-400 pl-4">
+                    <h3 class="text-blue-300 font-bold mb-1">Ultravioleta</h3>
+                    <p>Divide-se em UV-A, UV-B e UV-C. Responsável pelo bronzeado e síntese de vitamina D.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Detalhada do Visível -->
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Espectro da Luz Visível (Detalhamento)</h2>
+            
+            <div class="relative pt-8 pb-4 px-4">
+                <div class="visible-spectrum w-full">
+                    <!-- Marcadores de Comprimento de Onda -->
+                    <div class="marker" style="left: 0%">380 nm</div>
+                    <div class="marker" style="left: 18.9%">450 nm</div>
+                    <div class="marker" style="left: 35.1%">495 nm</div>
+                    <div class="marker" style="left: 51.3%">570 nm</div>
+                    <div class="marker" style="left: 62.1%">590 nm</div>
+                    <div class="marker" style="left: 70.2%">620 nm</div>
+                    <div class="marker" style="left: 100%">750 nm</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-2 mt-4">
+                <div class="p-2 rounded text-center text-xs" style="background: #f3f0ff; color: #4b0082"><strong>Violeta</strong><br>380-450nm</div>
+                <div class="p-2 rounded text-center text-xs" style="background: #ebf4ff; color: #0000ff"><strong>Azul</strong><br>450-495nm</div>
+                <div class="p-2 rounded text-center text-xs" style="background: #f0fff4; color: #008000"><strong>Verde</strong><br>495-570nm</div>
+                <div class="p-2 rounded text-center text-xs" style="background: #fffff0; color: #b8860b"><strong>Amarelo</strong><br>570-590nm</div>
+                <div class="p-2 rounded text-center text-xs" style="background: #fffaf0; color: #ff7f00"><strong>Laranja</strong><br>590-620nm</div>
+                <div class="p-2 rounded text-center text-xs" style="background: #fff5f5; color: #ff0000"><strong>Vermelho</strong><br>620-750nm</div>
+            </div>
+
+            <div class="mt-8 bg-gray-50 p-4 rounded-lg text-sm text-gray-700">
+                <h4 class="font-bold mb-2">💡 Notas sobre o Modelo de Bohr:</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Cada cor acima corresponde a uma transição eletrónica específica (Salto Quântico).</li>
+                    <li><strong>Energia:</strong> O Violeta possui maior energia e maior frequência; o Vermelho possui menor energia.</li>
+                    <li><strong>Relação:</strong> Quanto menor o comprimento de onda ($\lambda$), maior é a energia do fotão ($E = h \cdot c / \lambda$).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
